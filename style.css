@@ -1,0 +1,268 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+}
+
+nav {
+    background-color: rgb(35, 46, 77);
+    padding: 1em 0;
+}
+
+.nav__list {
+    display: flex;
+    gap: 1.5em;
+    justify-content: end;
+    align-items: center;
+    margin-right: 2em;
+    list-style: none;
+}
+
+.nav__option {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border: none;
+}
+
+.nav__option option {
+    color: rgb(255, 255, 255);
+    background-color: rgb(35, 46, 77);
+}
+
+.nav__link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.nav__btn {
+    display: inline-block;
+    background-color: rgb(254, 96, 72);
+    padding: 0.6em 1.4em;
+    border: none;
+    border-radius: 5px;
+}
+
+.nav__link:hover,
+.nav__btn:hover {
+    opacity: 0.85;
+}
+
+.hero__section {
+    background-color: rgba(0, 0, 0, 0.2);
+    background-blend-mode: multiply;
+    background-image: url(hero-bg.jpg);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 4em 4em 12em;
+}
+
+.container {
+    max-width: 600px;
+    margin-right: auto;
+}
+
+.hero__title {
+    color: rgb(35, 46, 77);
+    font-size: 2.5rem;
+    line-height: 1.3;
+    margin-bottom: 0.5em;
+}
+
+.hero__desc {
+    color: rgb(35, 46, 77);
+    font-size: 1.25rem;
+    line-height: 1.25;
+    margin-bottom: 2.5em;
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    color: rgb(255, 255, 255);
+    background-color: rgb(254, 96, 72);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.75em 1.2em;
+    transition: transform 0.1s;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.form__group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+
+.form__group input {
+    color: rgb(35, 46, 77);
+    background-color: rgb(255, 255, 255);
+    padding: 0.75em 1em;
+    border: 0;
+    width: 100%;
+}
+
+.form__group input:focus {
+    outline: 0;
+}
+
+.form__group i {
+    color: rgb(35, 46, 77);
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    opacity: 0.8;
+    transition: opacity 0.1s;
+}
+
+.form__group i:hover {
+    opacity: 1;
+}
+
+footer {
+    background-color: rgb(255, 255, 255);
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__list {
+    display: flex;
+    gap: 1em;
+    list-style: none;
+}
+
+.footer__link {
+    color: rgb(35, 46, 77);
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+.footer__link:hover {
+    opacity: 0.85;
+}
+
+.footer__icon {
+    font-size: 1.25rem;
+}
+
+.footer__cen {
+    color: rgb(35, 46, 77);
+    font-size: 1rem;
+    list-style: none;
+    margin-right: 14em;
+}
+
+@media (max-width: 1024px) {
+    .hero__section {
+        background-position: top;
+    }
+
+    .hero__title {
+        width: 60%;
+        font-size: 2.25rem;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.35);
+    }
+
+    .form__group {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav__list {
+        gap: 1em;
+        margin-right: 1em;
+    }
+
+    .hero__section {
+        padding: 1em 1em 10em;
+    }
+
+    .hero__title {
+        width: 50%;
+        font-size: 2rem;
+    }
+
+    .hero__desc {
+        font-size: 1rem;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn {
+        padding: 0.6em 1em;
+    }
+
+    .form__group {
+        width: 50%;
+    }
+
+    .form__group input {
+        padding: 0.6em 1em;
+    }
+
+    .form__group i {
+        right: 5px;
+    }
+
+    footer {
+        gap: 1em;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer__list {
+        flex-wrap: wrap;
+    }
+
+    .footer__cen {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 475px) {
+    body {
+        font-size: 0.875rem;
+    }
+
+    .hero__title {
+        font-size: 1.7rem;
+    }
+
+    .hero__desc {
+        width: 70%;
+        font-size: 0.875rem;
+    }
+
+    .form__group {
+        width: 60%;
+    }
+
+    .btn {
+        font-size: 0.875rem;
+    }
+}
